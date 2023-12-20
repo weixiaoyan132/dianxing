@@ -1,0 +1,39 @@
+{
+  "entryPagePath": "pages/dianxing/dianxing",
+  "pages":[
+    "pages/dianxing/dianxing",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/typelist/typelist",
+    "pages/my/my"
+
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#1C93D3",
+    "navigationBarTitleText": "典型案例评判系统",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#000000",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "iconPath",
+      "selectedIconPath": "selectedIconPath"
+    },{
+      "pagePath": "pages/dianxing/dianxing",
+      "text": "典型遴选",
+      "iconPath": "iconPath",
+      "selectedIconPath": "selectedIconPath"
+    },{
+      "pagePath": "pages/dianxing/dianxing",
+      "text": "我的",
+      "iconPath": "iconPath",
+      "selectedIconPath": "selectedIconPath"
+    }]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
