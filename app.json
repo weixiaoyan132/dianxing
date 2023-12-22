@@ -1,9 +1,8 @@
 {
-  "entryPagePath": "pages/dianxing/dianxing",
+  "entryPagePath": "pages/index/index",
   "pages":[
-    "pages/dianxing/dianxing",
     "pages/index/index",
-    "pages/logs/logs",
+    "pages/dianxing/dianxing",
     "pages/typelist/typelist",
     "pages/my/my"
 
@@ -12,28 +11,32 @@
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#1C93D3",
     "navigationBarTitleText": "典型案例评判系统",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle":"white"
   },
   "tabBar": {
-    "color": "#000000",
-    "selectedColor": "#000000",
+    "custom": true,
     "list": [{
       "pagePath": "pages/index/index",
-      "text": "首页",
-      "iconPath": "iconPath",
-      "selectedIconPath": "selectedIconPath"
+      "text": "首页"
     },{
       "pagePath": "pages/dianxing/dianxing",
-      "text": "典型遴选",
-      "iconPath": "iconPath",
-      "selectedIconPath": "selectedIconPath"
+      "text": "典型遴选"
     },{
-      "pagePath": "pages/dianxing/dianxing",
-      "text": "我的",
-      "iconPath": "iconPath",
-      "selectedIconPath": "selectedIconPath"
+      "pagePath": "pages/my/my",
+      "text": "我的"
     }]
   },
-  "style": "v2",
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "dianxing-header":"components/dianxing-header/dianxing-header",
+    "van-tabbar":"@vant/weapp/tabbar/index",
+    "van-tabbar-item": "@vant/weapp/tabbar-item/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-collapse": "@vant/weapp/collapse/index",
+    "van-collapse-item": "@vant/weapp/collapse-item/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-search": "@vant/weapp/search/index",
+    "van-toast": "@vant/weapp/toast/index"
+  }
 }

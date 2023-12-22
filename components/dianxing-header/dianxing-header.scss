@@ -1,0 +1,11 @@
+/* components/dianxing-header/dianxing-header.wxss */
+.header{
+  height: 100rpx;
+  width: 750rpx;
+  border-bottom: 1rpx solid var(--themeColor);
+  .header-logo{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(2, 119, 189,0.1);
+  }
+}
