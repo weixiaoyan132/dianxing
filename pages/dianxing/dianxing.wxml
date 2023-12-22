@@ -1,18 +1,32 @@
 <!--pages/dianxing/dianxing.wxml-->
-<view>
+<view class="dianxing-all">
   <van-dropdown-menu close-on-click-overlay close-on-click-outside active-color="var(--themeColor)">
   <van-dropdown-item bind:change="change_mytypical_search" model:value="{{ value1 }}" options="{{ option1 }}" />
   <van-dropdown-item bind:change="change_mytypical_search" model:value="{{ value2 }}" options="{{ option2 }}" />
   <van-dropdown-item bind:change="change_mytypical_search" model:value="{{ value3 }}" options="{{ option3 }}" />
   </van-dropdown-menu>
-  <pull-card wx:for="{{mytypical_data}}" wx:key="id">
+  <scroll-view 	scroll-y="{{true}}" class="mytypical-list">
+    <pull-card wx:for="{{mytypical_data}}" wx:key="id">
   <!--案件列表设置超出tab栏就可以开始滚动并且最上方的查询栏不动固定在页面上方？-->
-    <view slot="title">
-    案件基本信息
-    </view>
-    <view slot="content">
-    案件简介
-    </view>
-  </pull-card>
+      <view slot="title" class="typical-detail">
+        <van-row>
+          <van-col span="24">案件编码：{{item.id}}</van-col>
+        </van-row>
+        <van-row>
+          <van-col span="14">标题：{{item.title}}</van-col>
+          <van-col span="10">关键词：{{item.key}}</van-col>
+        </van-row>
+        <van-row>
+          <van-col span="7">类别：{{item.type}}</van-col>
+          <van-col span="7">状态：{{item.status}}</van-col>
+          <van-col span="10">时间：{{item.time}}</van-col>
+        </van-row>
+      </view>
+      <view slot="content">
+      案件简介
+      </view>
+    </pull-card>
+  </scroll-view>
+  
 
 </view>

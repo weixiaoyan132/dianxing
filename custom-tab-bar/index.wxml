@@ -1,5 +1,5 @@
 <!--custom-tab-bar/index.wxml-->
-<van-tabbar fixed safe-area-inset-bottom active="{{ active }}" bind:change="onChange">
+<van-tabbar fixed safe-area-inset-bottom active="{{ active }}" bind:change="onChange" class="bar">
   <van-tabbar-item icon="home-o"
   url="/pages/index/index" 
   link-type="switchTab">

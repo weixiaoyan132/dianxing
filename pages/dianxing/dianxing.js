@@ -36,7 +36,7 @@ Page({
         key:"www",
         type:"type",
         time:"2012-03-26",
-        statu:"草稿"
+        status:"草稿"
       },
       {
         id:"123",
@@ -44,7 +44,7 @@ Page({
         key:"www",
         type:"type",
         time:"2012-03-26",
-        statu:"草稿"
+        status:"草稿"
       },
       {
         id:"123",
@@ -52,7 +52,7 @@ Page({
         key:"www",
         type:"type",
         time:"2012-03-26",
-        statu:"草稿"
+        status:"草稿"
       },
       {
         id:"123",
@@ -60,7 +60,7 @@ Page({
         key:"www",
         type:"type",
         time:"2012-03-26",
-        statu:"草稿"
+        status:"草稿"
       },
       {
         id:"123",
@@ -68,7 +68,7 @@ Page({
         key:"www",
         type:"type",
         time:"2012-03-26",
-        statu:"草稿"
+        status:"草稿"
       },
       {
         id:"123",
@@ -76,7 +76,7 @@ Page({
         key:"www",
         type:"type",
         time:"2012-03-26",
-        statu:"草稿"
+        status:"草稿"
       },
       {
         id:"123",
@@ -84,7 +84,7 @@ Page({
         key:"www",
         type:"type",
         time:"2012-03-26",
-        statu:"草稿"
+        status:"草稿"
       },
       {
         id:"123",
@@ -92,7 +92,7 @@ Page({
         key:"www",
         type:"type",
         time:"2012-03-26",
-        statu:"草稿"
+        status:"草稿"
       }
     ],
   },

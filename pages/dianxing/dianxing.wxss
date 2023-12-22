@@ -1,1 +1,9 @@
 /* pages/dianxing/dianxing.wxss */
+.dianxing-all .mytypical-list{
+  height: 1172rpx;
+  border: 2rpx black;
+}
+.dianxing-all .mytypical-list .typical-detail{
+  height: 150rpx;
+  overflow: hidden;
+}
