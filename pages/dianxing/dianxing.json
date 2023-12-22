@@ -1,5 +1,9 @@
 {
-  "navigationBarTitleText": "首页",
+  "navigationBarTitleText": "典型判断",
   "navigationBarTextStyle":"white",
-  "usingComponents": {}
+  "usingComponents": {
+    "van-dropdown-menu": "@vant/weapp/dropdown-menu/index",
+    "van-dropdown-item": "@vant/weapp/dropdown-item/index",
+    "pull-card":"/components/pull-card/pull-card"
+  }
 }

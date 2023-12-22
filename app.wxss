@@ -1,10 +1,17 @@
-/**app.wxss**/
-.container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 200rpx 0;
+view,text {
   box-sizing: border-box;
-} 
+}
+page {
+  --themeColor:#1565C0;
+  --globalColor: #1a1b1c;
+  --focusColor:#4c4d4e;
+  --desColor:#7e8081;
+  --greyColor:#8e8e8e;
+  --subColor:#b1b2b3;
+  --lightColor:#e4e4e4;
+  --global1:#e3e4e5;
+  --global2:#f6f7f8;
+  --global3:#ffffff;
+
+  background-color: rgb(245, 245, 245);
+}

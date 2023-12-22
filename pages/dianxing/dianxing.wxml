@@ -1,2 +1,18 @@
 <!--pages/dianxing/dianxing.wxml-->
-<text>首页搜索</text>
+<view>
+  <van-dropdown-menu close-on-click-overlay close-on-click-outside active-color="var(--themeColor)">
+  <van-dropdown-item bind:change="change_mytypical_search" model:value="{{ value1 }}" options="{{ option1 }}" />
+  <van-dropdown-item bind:change="change_mytypical_search" model:value="{{ value2 }}" options="{{ option2 }}" />
+  <van-dropdown-item bind:change="change_mytypical_search" model:value="{{ value3 }}" options="{{ option3 }}" />
+  </van-dropdown-menu>
+  <pull-card wx:for="{{mytypical_data}}" wx:key="id">
+  <!--案件列表设置超出tab栏就可以开始滚动并且最上方的查询栏不动固定在页面上方？-->
+    <view slot="title">
+    案件基本信息
+    </view>
+    <view slot="content">
+    案件简介
+    </view>
+  </pull-card>
+
+</view>

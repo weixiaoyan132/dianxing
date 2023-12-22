@@ -1,3 +1,59 @@
 <view class="all">
+  <dianxing-header>
+  </dianxing-header>
+  <!--<view class="card">
+    <van-collapse border="{{false}}" class="search" value="{{ activeNames }}" bind:change="detail_search">
+        <van-search
+          model:value="{{ value }}"
+          placeholder="请输入搜索关键词"
+          use-action-slot
+          bind:search="onSearch"
+          custom-class="search-subhead"
+          input-class="search-field"
+        >
+        <view slot="action" bind:tap="onSearch">搜索</view>
+        </van-search>
+      <van-collapse-item border name="1" custom-class="searchset">
+        <view class="search-box">
+        结构化搜索
+        </view>
+      </van-collapse-item>
+    </van-collapse>
 
+  </view>-->
+  <pull-card>
+      <van-search
+        slot="title"
+        model:value="{{ value }}"
+        placeholder="请输入搜索关键词"
+        use-action-slot
+        bind:search="onSearch"
+        custom-class="search-subhead"
+        input-class="search-field"
+        >
+        <view slot="action" bind:tap="onSearch">搜索</view>
+      </van-search>
+      <view class="search-box" slot="content">
+        结构化搜索
+        </view>
+  </pull-card>
+  <view class="statistics_part">
+    <van-grid clickable column-num="2" center>
+      <van-grid-item use-slot  url=""  >
+      <!--//这里跳转url-->
+        <text>典型案例数</text>
+        <view class="num">
+        {{typicalnum}}
+        </view>
+      </van-grid-item>
+      <van-grid-item use-slot url=""   >
+      <!--//这里跳转url-->
+        <text>全部案例数</text>
+        <view class="num">
+        {{allnum}}
+        </view>
+      </van-grid-item>
+</van-grid>
+  </view>
+  <van-toast id="van-toast" />
 </view>
