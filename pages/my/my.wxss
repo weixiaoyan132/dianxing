@@ -1,1 +1,35 @@
 /* pages/my/my.wxss */
+.statistics_part{
+  margin-top: 2%;
+}
+.statistics_part .num{
+  margin-top: 2%;
+  font-size: 50rpx;
+  color: var(--themeColor);
+}
+.expert-detail{
+  background-color: white;
+  padding: 3%;
+  text-align: center;
+  height: fit-content;
+}
+.expert-detail .headimag{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.expert-detail .expert-detail-text-name{
+  display: block;
+  font-size: 45rpx;
+  color: var(--focusColor);
+  margin-bottom: 2%;
+}
+.expert-detail .expert-detail-text{
+  
+  font-size: 30rpx;
+  color: var(--desColor);
+}
+.action{
+  color: var(--focusColor);
+  margin-top: 15rpx;
+}

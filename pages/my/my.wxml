@@ -1,2 +1,64 @@
 <!--pages/my/my.wxml-->
-<text>pages/my/my.wxml</text>
+<dianxing-header></dianxing-header>
+<view class="expert-detail">
+  <van-image
+  round
+  width="160rpx"
+  height="160rpx"
+  show-error
+  show-loading
+  custom-class="headimag"
+  src="/statics/images/035_我的.png"
+  
+  />
+  <text class="expert-detail-text-name"> {{expert_name}}</text>
+  <view class="expert-detail-text">
+    <van-icon name="phone" />
+    <text>{{phone}}</text>
+  </view>
+  <view class="expert-detail-text">
+    <van-icon name="location" />
+    <text>{{work_place}}</text>
+  </view>
+</view>
+<view class="statistics_part">
+    <van-grid clickable column-num="2" center>
+      <van-grid-item use-slot  url=""  >
+      <!--//这里跳转url-->
+        <text>带审阅案例数</text>
+        <view class="num">
+        {{wait_to_review_num}}
+        </view>
+      </van-grid-item>
+      <van-grid-item use-slot url=""   >
+      <!--//这里跳转url-->
+        <text>已审阅案例数</text>
+        <view class="num">
+          {{reviewed_num}}
+        </view>
+      </van-grid-item>
+      <van-grid-item use-slot url=""   >
+      <!--//这里跳转url-->
+        <text>驳回案例数</text>
+        <view class="num">
+          {{reject_num}}
+        </view>
+      </van-grid-item>
+      <van-grid-item use-slot url=""   >
+      <!--//这里跳转url-->
+        <text>通过典型案例数</text>
+        <view class="num">
+          {{typical_num}}
+        </view>
+      </van-grid-item>
+  </van-grid>
+</view>
+<view class="action">
+  <van-grid column-num="4" >
+  <van-grid-item url="" icon="completed" text="通过记录"  />
+  <!--这里可以添加url跳转-->
+  <van-grid-item icon="clear" text="驳回记录"  />
+  <van-grid-item icon="todo-list" text="浏览记录"  />
+  <van-grid-item icon="add" text="上传案例"  />
+</van-grid>
+</view>

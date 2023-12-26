@@ -11,6 +11,20 @@
       "list": [
         {
           "name": "",
+          "pathName": "pages/detailText/detailText",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/my/my",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
           "pathName": "pages/dianxing/dianxing",
           "query": "",
           "launchMode": "default",

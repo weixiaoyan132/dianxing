@@ -1,25 +1,25 @@
-// pages/my/my.js
+// pages/detailText/detailText.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    expert_name:"卫晓妍",
-    phone:15951083371,
-    work_place:"江苏省南京市东南大学",
-    wait_to_review_num:20,
-    reviewed_num:10,
-    reject_num:5,
-    typical_num:5
-  },
+    id:"123",
 
+  },
+  getData(option){
+
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-    let tabshow=this.getTabBar();
-    tabshow.setData({active : 2});
+    console.log(options)
+    this.setData({
+      id:options.id,
+    })
+
   },
 
   /**

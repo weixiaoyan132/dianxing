@@ -1,7 +1,7 @@
 <!--components/pull-card/pull-card.wxml-->
 <view class="card">
     <van-collapse border="{{false}}"  value="{{ activeNames }}" bind:change="detail_search">
-        <slot name="title"></slot>
+        <slot name="title" ></slot>
       <van-collapse-item border name="1" >
         <slot name="content"></slot>
       </van-collapse-item>

@@ -4,8 +4,8 @@
     "pages/index/index",
     "pages/dianxing/dianxing",
     "pages/typelist/typelist",
-    "pages/my/my"
-
+    "pages/my/my",
+    "pages/detailText/detailText"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -39,6 +39,8 @@
     "van-search": "@vant/weapp/search/index",
     "van-toast": "@vant/weapp/toast/index",
     "van-row": "@vant/weapp/row/index",
-    "van-col": "@vant/weapp/col/index"
+    "van-col": "@vant/weapp/col/index",
+    "van-empty": "@vant/weapp/empty/index",
+    "van-image": "@vant/weapp/image/index"
   }
 }

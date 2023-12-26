@@ -1,6 +1,6 @@
 <!--components/dianxing-header/dianxing-header.wxml-->
 <view class="header">
-  <navigator url="/pages/index/index" class="header-logo">
+  <navigator url="/pages/index/index" class="header-logo" open-type="reLaunch">
   这是首页的logo放置处，点击即可回到首页
   </navigator>
 </view>

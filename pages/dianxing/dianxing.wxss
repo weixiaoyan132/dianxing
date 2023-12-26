@@ -1,9 +1,26 @@
 /* pages/dianxing/dianxing.wxss */
-.dianxing-all .mytypical-list{
-  height: 1172rpx;
+.typical-all .mytypical-list{
+  height: 1070rpx;
   border: 2rpx black;
+  min-height: 500rpx;
 }
-.dianxing-all .mytypical-list .typical-detail{
-  height: 150rpx;
+.typical-all .mytypical-list .typical-detail{
+  height: fit-content;
   overflow: hidden;
+  padding: 20rpx;
+  color: var(--focusColor);
 }
+.typical-all .mytypical-list .typical-detail .typical-num{
+  margin-bottom: 20rpx;
+  color: var(--greyColor);
+}
+.typical-all .mytypical-list .typical-detail .typical-text{
+  margin-bottom: 10rpx;
+  
+}
+.typical-all .mytypical-list .typical-detail .typical-title{
+  text-align: center;
+  margin-bottom: 20rpx;
+  color: var(--globalColor);
+}
+

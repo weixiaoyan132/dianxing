@@ -6,6 +6,7 @@ Page({
    */
   data: {
     name:"dianxing",
+    is_empty:true,
     option1: [
       { text: '所有类型', value: 0, icon:"" },
       { text: '类型1', value: 1 ,icon:""},
@@ -31,8 +32,8 @@ Page({
     value3: 0,
     mytypical_data:[
       {
-        id:"123",
-        title:"111",
+        id:"123456789",
+        title:"检察机关依法惩治拒不支付劳动报酬犯罪典型案例",
         key:"www",
         type:"type",
         time:"2012-03-26",
@@ -100,6 +101,15 @@ Page({
   change_mytypical_search(e){
     console.log(e.detail);
   },
+
+  search_detail_text(e){
+    let id=e.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: '/pages/detailText/detailText?id='+id,
+    })
+    
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
