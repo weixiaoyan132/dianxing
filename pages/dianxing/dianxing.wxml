@@ -28,7 +28,7 @@
         </van-row>
       </view>
       <view slot="content">
-      <text>案件简介</text>
+      <text>案件简介案件简介案件简介案件简介案件简介案件简介案件简介案件简介案件简介案件简介案件简介案件简介v案件简介案件简介案件简介案件简介案件简介</text>
       </view>
     </pull-card>
   </scroll-view>

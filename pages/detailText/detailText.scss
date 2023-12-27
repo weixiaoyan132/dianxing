@@ -1,1 +1,61 @@
 /* pages/detailText/detailText.wxss */
+.detail{
+  .title{
+    font-size: 50rpx;
+    line-height: 1.5em;
+    padding:30rpx;
+  }
+  .info{
+    font-size: 28rpx;
+    color:var(--desColor);
+    display: flex;
+    justify-content: space-evenly;
+    padding:0 40rpx 0 40rpx;
+    margin-bottom: 20rpx;
+    .left{
+      width: 50%;
+      .detail-info{
+        display: block;
+      }
+    }
+    .right{
+      width: 50%;
+      align-items: center;
+      .detail-info{
+        display: block;
+      }
+      text{
+        padding-left:5rpx;
+      }
+    }    
+  }
+  .content{
+    height: 800rpx;
+    overflow: hidden;
+    .text-title{
+      width: 100%;
+      text-align: center;
+    }
+    .text-content{
+      width: 100%;
+      height: fit-content;
+    }
+  }
+  .share{
+    position: absolute;
+    top:0;
+    left:0;
+    opacity: 0;
+  }
+  .copyright{
+    margin-top:30rpx;
+    background:var(--globalBgColor2);
+    padding:30rpx;
+    font-size: 26rpx;
+    color:#888;
+    .top{
+      font-size: 30rpx;
+      padding-bottom:15rpx;
+    }
+  }
+}

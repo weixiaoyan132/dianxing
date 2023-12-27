@@ -22,3 +22,7 @@
 .van-collapse-item__title .van-cell {
   padding: 0rpx !important;
 }
+
+.van-collapse-item {
+  max-height: fit-content !important;
+}

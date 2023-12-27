@@ -1,0 +1,71 @@
+/* pages/detailText/detailText.wxss */
+.detail .title {
+  font-size: 50rpx;
+  line-height: 1.5em;
+  padding: 30rpx;
+}
+
+.detail .info {
+  font-size: 28rpx;
+  color: var(--desColor);
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0 40rpx 0 40rpx;
+  margin-bottom: 20rpx;
+}
+
+.detail .info .left {
+  width: 50%;
+}
+
+.detail .info .left .detail-info {
+  display: block;
+}
+
+.detail .info .right {
+  width: 50%;
+  align-items: center;
+}
+
+.detail .info .right .detail-info {
+  display: block;
+}
+
+.detail .info .right text {
+  padding-left: 5rpx;
+}
+
+.detail .content {
+  height: 800rpx;
+  overflow: hidden;
+}
+
+.detail .content .text-title {
+  width: 100%;
+  text-align: center;
+}
+
+.detail .content .text-content {
+  width: 100%;
+  height: fit-content;
+}
+
+.detail .share {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.detail .copyright {
+  margin-top: 30rpx;
+  background: var(--globalBgColor2);
+  padding: 30rpx;
+  font-size: 26rpx;
+  color: #888;
+}
+
+.detail .copyright .top {
+  font-size: 30rpx;
+  padding-bottom: 15rpx;
+}

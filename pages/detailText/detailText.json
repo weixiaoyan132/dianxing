@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "pull-card":"/components/pull-card/pull-card",
+    "van-divider": "@vant/weapp/divider/index"
+  }
 }

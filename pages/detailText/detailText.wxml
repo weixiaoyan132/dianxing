@@ -1,2 +1,41 @@
 <!--pages/detailText/detailText.wxml-->
 <text>{{id}}</text>
+<view style="padding:80rpx 30rpx;" wx:if="{{!detail}}">
+  <van-skeleton title  row="5" />
+</view>
+
+<view class="detail" wx:else>
+  <view class="title">
+    {{detail.title}}
+  </view>
+  <view class="info">
+    <view class="left">
+      <text class="detail-info">案件编号：{{detail.id}}</text>
+      <text wx:if="{{detail.source}}" class="detail-info">来源人：{{detail.source_id}}</text>
+      <text  class="detail-info">状态：{{detail.case_state}}</text>
+    </view>
+    <view class="right">
+      <text class="detail-info">类型：{{detail.type}}</text>
+      <text wx:if="{{detail.source}}" class="detail-info">来源城市：{{detail.city}}</text>
+      <text  class="detail-info">是否典型：{{detail.is_typical}}</text>
+    </view>
+  </view>
+  <van-divider />
+  <scroll-view scroll-y="{{true}}" class="content">
+    <view wx:for="{{detail.case_body.body}}" wx:key="partTitle">
+      <pull-card>
+      <text slot="title" class="text-title">{{item.partTitle}}</text>
+      <textarea slot="content" class="text-content">{{item.text}}</textarea>
+      </pull-card>
+    </view>
+  </scroll-view>
+  <van-icon name="share-o" size="18" />
+      <text>分享</text>
+      <button open-type="share" class="share" size="mini">
+      享
+      </button>
+  <view class="copyright">
+    <view class="top">免责声明</view>
+    <view>本文来自网络新闻创作者，不代表巷子深小程序端的观点和立场，如有侵权请联系客服进行删除。</view>
+  </view>
+</view>

@@ -41,6 +41,7 @@
     "van-row": "@vant/weapp/row/index",
     "van-col": "@vant/weapp/col/index",
     "van-empty": "@vant/weapp/empty/index",
-    "van-image": "@vant/weapp/image/index"
+    "van-image": "@vant/weapp/image/index",
+    "van-skeleton": "@vant/weapp/skeleton/index"
   }
 }
