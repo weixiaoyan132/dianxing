@@ -1,22 +1,43 @@
 /* pages/dianxing/dianxing.wxss */
+page{
+  height:100vh ;
+}
+.typical-all .search-choose{
+  height: 100rpx;
+}
 .typical-all .mytypical-list{
-  height: 1070rpx;
+  height: calc(100vh - 200rpx - 50px - var(--bottom-height--));
   border: 2rpx black;
-  min-height: 500rpx;
+}
+.typical-all .mytypical-list .text-brief{
+  text-align: justify;
+}
+.typical-all .mytypical-list .text-brief::after{
+  width: 100%;
+  display: inline-block;
+  content: ''; 
 }
 .typical-all .mytypical-list .typical-detail{
   height: fit-content;
   overflow: hidden;
-  padding: 20rpx;
+  padding: 20rpx 20rpx 10rpx 20rpx;
   color: var(--focusColor);
+  text-align: justify;
 }
 .typical-all .mytypical-list .typical-detail .typical-num{
   margin-bottom: 20rpx;
   color: var(--greyColor);
 }
 .typical-all .mytypical-list .typical-detail .typical-text{
-  margin-bottom: 10rpx;
-  
+  line-height: 25rpx;
+}
+.typical-all .mytypical-list .typical-detail .typical-text .typical-text-1{
+  text-align: justify;
+}
+.typical-all .mytypical-list .typical-detail .typical-text .typical-text-1::after{
+  width: 100%;
+  display: inline-block;
+  content: '';
 }
 .typical-all .mytypical-list .typical-detail .typical-title{
   text-align: center;

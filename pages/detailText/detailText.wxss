@@ -2,59 +2,74 @@
 .detail .title {
   font-size: 50rpx;
   line-height: 1.5em;
-  padding: 30rpx;
+  padding: 15rpx 30rpx;
+}
+
+.detail .title .share {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
 }
 
 .detail .info {
   font-size: 28rpx;
   color: var(--desColor);
-  display: flex;
-  justify-content: space-evenly;
-  padding: 0 40rpx 0 40rpx;
-  margin-bottom: 20rpx;
+  padding: 10rpx 20rpx 0 30rpx;
+  margin-bottom: 15rpx;
 }
 
-.detail .info .left {
-  width: 50%;
+.detail .info .info-row {
+  line-height: 22rpx;
 }
 
-.detail .info .left .detail-info {
-  display: block;
+.detail .info .info-text-1 {
+  text-align: justify;
 }
 
-.detail .info .right {
-  width: 50%;
-  align-items: center;
-}
-
-.detail .info .right .detail-info {
-  display: block;
-}
-
-.detail .info .right text {
-  padding-left: 5rpx;
+.detail .info .info-text-1::after {
+  width: 100%;
+  display: inline-block;
+  content: '';
 }
 
 .detail .content {
-  height: 800rpx;
+  height: calc(100vh - 180rpx - 150rpx - 400rpx - var(--bottom-height--));
   overflow: hidden;
 }
 
 .detail .content .text-title {
   width: 100%;
-  text-align: center;
+  color: var(--focusColor);
+  font-size: 40rpx;
+  padding: 20rpx 0rpx 0rpx 50rpx;
 }
 
 .detail .content .text-content {
   width: 100%;
   height: fit-content;
+  text-align: justify;
 }
 
-.detail .share {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
+.detail .content .text-content::after {
+  width: 100%;
+  display: inline-block;
+  content: '';
+}
+
+.detail .review {
+  height: 400rpx;
+  background-color: #888;
+  margin-top: 3rpx;
+}
+
+.detail .review .write-part {
+  height: 100%;
+}
+
+.detail .review .write-part .van-tabs__scroll--card {
+  margin: 0  !important;
+  width: 100%;
 }
 
 .detail .copyright {

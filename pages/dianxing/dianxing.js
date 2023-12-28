@@ -1,10 +1,13 @@
 // pages/dianxing/dianxing.js
+const app=getApp();
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    bottom_height:app.screen_res.bottomSafeHeight,
     name:"dianxing",
     is_empty:true,
     option1: [
@@ -123,7 +126,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady() {
-
+    
   },
 
   /**

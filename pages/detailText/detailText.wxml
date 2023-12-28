@@ -1,41 +1,74 @@
 <!--pages/detailText/detailText.wxml-->
-<text>{{id}}</text>
-<view style="padding:80rpx 30rpx;" wx:if="{{!detail}}">
+<view style="padding:80rpx 20rpx;" wx:if="{{!detail}}">
   <van-skeleton title  row="5" />
 </view>
 
 <view class="detail" wx:else>
   <view class="title">
     {{detail.title}}
-  </view>
-  <view class="info">
-    <view class="left">
-      <text class="detail-info">案件编号：{{detail.id}}</text>
-      <text wx:if="{{detail.source}}" class="detail-info">来源人：{{detail.source_id}}</text>
-      <text  class="detail-info">状态：{{detail.case_state}}</text>
-    </view>
-    <view class="right">
-      <text class="detail-info">类型：{{detail.type}}</text>
-      <text wx:if="{{detail.source}}" class="detail-info">来源城市：{{detail.city}}</text>
-      <text  class="detail-info">是否典型：{{detail.is_typical}}</text>
-    </view>
-  </view>
-  <van-divider />
-  <scroll-view scroll-y="{{true}}" class="content">
-    <view wx:for="{{detail.case_body.body}}" wx:key="partTitle">
-      <pull-card>
-      <text slot="title" class="text-title">{{item.partTitle}}</text>
-      <textarea slot="content" class="text-content">{{item.text}}</textarea>
-      </pull-card>
-    </view>
-  </scroll-view>
-  <van-icon name="share-o" size="18" />
-      <text>分享</text>
+    <van-icon name="share-o" size="18" />
+      <text style="font-size: 35rpx;">分享</text>
       <button open-type="share" class="share" size="mini">
       享
       </button>
-  <view class="copyright">
+  </view>
+  <view class="info">
+    <van-row class="info-row">
+      <van-col span="4" custom-class="info-text-1">案件编号</van-col>
+      <van-col span="9" custom-class="info-text-2">：{{detail.id}}</van-col>
+      <van-col span="4" custom-class="info-text-1" >类型</van-col>
+      <van-col span="7" custom-class="info-text-2">：{{detail.type}}</van-col>
+    </van-row>
+    <van-row class="info-row">
+      <van-col span="4" custom-class="info-text-1">来源人</van-col>
+      <van-col span="9" custom-class="info-text-2">：{{detail.source_id}}</van-col>
+      <van-col span="4" custom-class="info-text-1" >来源城市</van-col>
+      <van-col span="7" custom-class="info-text-2">：{{detail.city}}</van-col>
+    </van-row>
+    <van-row class="info-row">
+      <van-col span="4" custom-class="info-text-1">状态</van-col>
+      <van-col span="9" custom-class="info-text-2">：{{detail.case_state}}</van-col>
+      <van-col span="4" custom-class="info-text-1" >是否典型</van-col>
+      <van-col span="7" custom-class="info-text-2">：{{detail.is_typical}}</van-col>
+    </van-row>
+    
+  </view> 
+  <van-divider custom-style="margin:10rpx" />
+  <scroll-view scroll-y="{{true}}" class="content" style="--bottom-height--:{{bottom_heigth}}px">
+    <view wx:for="{{detail.case_body.body}}" wx:key="partTitle">
+      <pull-card>
+      <view slot="title" class="text-title">{{item.partTitle}}</view>
+      <view slot="content" class="text-content">
+      <text user-select>{{item.text}}
+      </text></view>
+      </pull-card>
+    </view>
+  </scroll-view>
+  <view class="review">
+    <view class="gpt-part"></view>
+    <view class="write-part"  >
+      <van-tabs swipeable active="reason" type="card" animated color="var(--themeColor)">
+        <van-tab title="推荐理由" name="reason">
+          <scroll-view scroll-y="{{true}}" style="height: calc(400rpx - 30px - 100rpx);">
+            <van-field 
+              adjust-position
+              value="{{ message }}"
+              show-word-limit="{{true}}"
+              maxlength="{{500}}"
+              type="textarea"
+              placeholder="请输入推荐理由"
+              autosize="{maxHeight: 300, minHeight: 500 }"
+              border="{{ false }}"
+            />
+          </scroll-view>
+          <view class="process"></view>
+        </van-tab>
+        <van-tab title="专家点评" name="expert">专家点评</van-tab>
+    </van-tabs>
+    </view>
+  </view>
+  <!-- <view class="copyright">
     <view class="top">免责声明</view>
     <view>本文来自网络新闻创作者，不代表巷子深小程序端的观点和立场，如有侵权请联系客服进行删除。</view>
-  </view>
+  </view> -->
 </view>

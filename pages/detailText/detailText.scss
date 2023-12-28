@@ -3,49 +3,69 @@
   .title{
     font-size: 50rpx;
     line-height: 1.5em;
-    padding:30rpx;
+    padding:15rpx 30rpx;
+    .share{
+      position: absolute;
+      top:0;
+      left:0;
+      opacity: 0;
+    }
   }
   .info{
     font-size: 28rpx;
     color:var(--desColor);
-    display: flex;
-    justify-content: space-evenly;
-    padding:0 40rpx 0 40rpx;
-    margin-bottom: 20rpx;
-    .left{
-      width: 50%;
-      .detail-info{
-        display: block;
-      }
+    padding:10rpx 20rpx 0 30rpx;
+    margin-bottom: 15rpx;
+    .info-row{
+      line-height: 22rpx;
     }
-    .right{
-      width: 50%;
-      align-items: center;
-      .detail-info{
-        display: block;
-      }
-      text{
-        padding-left:5rpx;
-      }
-    }    
+    .info-text-1{
+      text-align: justify;
+    }
+    .info-text-1::after{
+      width: 100%;
+      display: inline-block;
+      content: '';
+    }
+
   }
+
   .content{
-    height: 800rpx;
+    height: calc(100vh - 180rpx - 150rpx - 400rpx - var(--bottom-height--));
     overflow: hidden;
     .text-title{
       width: 100%;
-      text-align: center;
+      color: var(--focusColor);
+      font-size: 40rpx;
+      padding:20rpx 0rpx 0rpx 50rpx;
     }
     .text-content{
       width: 100%;
       height: fit-content;
+      text-align: justify;
     }
+    .text-content::after{
+      width: 100%;
+      display: inline-block;
+      content: '';
+    }
+
   }
-  .share{
-    position: absolute;
-    top:0;
-    left:0;
-    opacity: 0;
+  .review{
+    height: 400rpx;
+    background-color: #888;
+    margin-top: 3rpx;
+    .gpt-part{
+
+    }
+    .write-part{
+      height: 100%;
+      .van-tabs__scroll--card{
+         margin: 0  !important;
+         width: 100%;
+      }
+    }
+    
   }
   .copyright{
     margin-top:30rpx;

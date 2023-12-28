@@ -1,11 +1,12 @@
-App({
 
+App({
+  screen_res:{},
   /**
    * 当小程序初始化完成时，会触发 onLaunch（全局只触发一次）
    */
   onLaunch: function () {
     const res = wx.getSystemInfoSync()
-   const result = {
+    const result = {
     ...res,
     bottomSafeHeight: 0,
 		isIphoneX: false,
@@ -45,6 +46,9 @@ App({
     const myCanvasWidth = (640 / 375) * result.screenWidth
     const myCanvasHeight = (1000 / 667) * result.screenHeight
     const scale = myCanvasWidth / myCanvasHeight
+    const rate = 750/result.screenWidth;
+    console.log(rate);
+    result.rate=rate;//自定义，以375px的规格写样式，切换机型时计算1px为多少rpx，计算高度；
     if (scale < 0.64) {
       result.isHeightPhone = true
     }
@@ -60,23 +64,29 @@ App({
     // 写入胶囊数据
     result.capsuleInfo = capsuleInfo;
     // 安全区域
-    const safeArea = result.safeArea
+    const safeArea = result.safeArea;
     // 可视区域高度 - 适配横竖屏场景
-    const screenHeight2 = Math.max(result.screenHeight, result.screenWidth)
-    const height = Math.max(safeArea.height, safeArea.width)
+    const screenHeight2 = Math.max(result.screenHeight, result.screenWidth);
+    const height = Math.max(safeArea.height, safeArea.width);
     // 状态栏高度
-    const statusBarHeight = result.statusBarHeight
+    const statusBarHeight = result.statusBarHeight;
     // 获取底部安全区域高度（全面屏手机）
     if (safeArea && height && screenHeight2) {
-      result.bottomSafeHeight = screenHeight2 - height - statusBarHeight
+      result.bottomSafeHeight = screenHeight2 - height - statusBarHeight;
       if (result.bottomSafeHeight < 0) {
-        result.bottomSafeHeight = 0
+        result.bottomSafeHeight = 0;
       }
     }
     // 设置header高度
-    result.headerHeight = statusBarHeight + navbarHeight
+    result.headerHeight = statusBarHeight + navbarHeight;
     // 导航栏高度
-    result.navbarHeight = navbarHeight
+    result.navbarHeight = navbarHeight;
+    this.screen_res=result;
+    console.log(result.bottomSafeHeight);
+    console.log(result.pageHeight);
+    console.log(result.windowHeight);
+    console.log(result.screenHeight)
+    console.log(result.statusBarHeight)
   },
 
   /**

@@ -2,6 +2,7 @@ view,text {
   box-sizing: border-box;
 }
 page {
+  
   --themeColor:#1565C0;
   --globalColor: #1a1b1c;
   --focusColor:#4c4d4e;
