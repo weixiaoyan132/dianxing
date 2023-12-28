@@ -45,6 +45,8 @@
     "van-skeleton": "@vant/weapp/skeleton/index",
     "van-tab": "@vant/weapp/tab/index",
     "van-tabs": "@vant/weapp/tabs/index",
-    "van-field": "@vant/weapp/field/index"
+    "van-field": "@vant/weapp/field/index",
+    "van-steps": "@vant/weapp/steps/index",
+    "van-button": "@vant/weapp/button/index"
   }
 }

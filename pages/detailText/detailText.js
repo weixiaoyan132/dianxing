@@ -7,7 +7,20 @@ Page({
    * 页面的初始数据
    */
   data: {
-    bottom_heigth:app.screen_res.bottomSafeHeight,
+    bottom_height:app.screen_res.bottomSafeHeight,
+    window_height:app.screen_res.windowHeight,
+    gptHelp:true,
+    steps: [
+      {
+        text: '推荐理由',
+      },
+      {
+        text: '专家点评',
+      },
+    ],
+    active:0,
+    reason:"1245",
+    review:"wfsbd",
     detail:{
       id:"123456789",
       title:"检察机关依法惩治拒不支付劳动报酬犯罪典型案例",
@@ -33,6 +46,9 @@ Page({
       },
     },
 
+  },
+  closeGPT(){
+    console.log("关闭")
   },
   getData(option){
     //let id=option.id;

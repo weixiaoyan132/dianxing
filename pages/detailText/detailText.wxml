@@ -34,7 +34,7 @@
     
   </view> 
   <van-divider custom-style="margin:10rpx" />
-  <scroll-view scroll-y="{{true}}" class="content" style="--bottom-height--:{{bottom_heigth}}px">
+  <scroll-view scroll-y="{{true}}" class="content" style="--bottom-height--:{{bottom_height}}px;--window-height--:{{window_height}}px">
     <view wx:for="{{detail.case_body.body}}" wx:key="partTitle">
       <pull-card>
       <view slot="title" class="text-title">{{item.partTitle}}</view>
@@ -45,26 +45,44 @@
     </view>
   </scroll-view>
   <view class="review">
-    <view class="gpt-part"></view>
+    <view class="gpt-part" style="--bottom-height--:{{bottom_height}}px;" wx:if="{{gptHelp}}">
+      <van-icon name="cross" bind:tap="closeGPT" />
+    </view>
     <view class="write-part"  >
       <van-tabs swipeable active="reason" type="card" animated color="var(--themeColor)">
         <van-tab title="推荐理由" name="reason">
-          <scroll-view scroll-y="{{true}}" style="height: calc(400rpx - 30px - 100rpx);">
+          <scroll-view scroll-y="{{true}}" style="height: calc(400rpx - 30px - 90rpx);">
             <van-field 
               adjust-position
-              value="{{ message }}"
+              value="{{ reason }}"
               show-word-limit="{{true}}"
               maxlength="{{500}}"
               type="textarea"
               placeholder="请输入推荐理由"
-              autosize="{maxHeight: 300, minHeight: 500 }"
+              autosize="{maxHeight: 600, minHeight: 500 }"
               border="{{ false }}"
             />
           </scroll-view>
-          <view class="process"></view>
         </van-tab>
-        <van-tab title="专家点评" name="expert">专家点评</van-tab>
-    </van-tabs>
+        <van-tab title="专家点评" name="expert"><scroll-view scroll-y="{{true}}" style="height: calc(400rpx - 30px - 90rpx);">
+            <van-field 
+              adjust-position
+              value="{{ review }}"
+              show-word-limit="{{true}}"
+              maxlength="{{500}}"
+              type="textarea"
+              placeholder="请输入专家点评"
+              autosize="{maxHeight: 600, minHeight: 500 }"
+              border="{{ false }}"
+            />
+          </scroll-view></van-tab>
+      </van-tabs>
+      <view class="bottom-group">
+        <van-steps custom-class="process" steps="{{ steps }}" active="{{ active }}" active-color="var(--themeColor)" />
+        <van-button color="var(--themeColor)" type="info" custom-class="button-style">GPT</van-button>
+        <van-button color="var(--themeColor)" plain hairline type="primary" custom-class="button-style">保存</van-button>
+        <van-button color="var(--themeColor)" plain hairline type="primary" custom-class="button-style">提交</van-button>
+      </view>
     </view>
   </view>
   <!-- <view class="copyright">

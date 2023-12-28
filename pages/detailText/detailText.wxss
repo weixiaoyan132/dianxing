@@ -34,7 +34,7 @@
 }
 
 .detail .content {
-  height: calc(100vh - 180rpx - 150rpx - 400rpx - var(--bottom-height--));
+  height: calc(var(--window-height--) - 182rpx - 156rpx - 400rpx - 10rpx - 2px - var(--bottom-height--));
   overflow: hidden;
 }
 
@@ -59,8 +59,16 @@
 
 .detail .review {
   height: 400rpx;
-  background-color: #888;
-  margin-top: 3rpx;
+  background-color: var(--global3);
+  margin-top: 1px;
+}
+
+.detail .review .gpt-part {
+  background-color: var(--global3);
+  height: 300rpx;
+  width: 100%;
+  position: absolute;
+  bottom: calc(400rpx + 1px + var(--bottom-height--));
 }
 
 .detail .review .write-part {
@@ -70,6 +78,31 @@
 .detail .review .write-part .van-tabs__scroll--card {
   margin: 0  !important;
   width: 100%;
+}
+
+.detail .review .bottom-group {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 90rpx;
+}
+
+.detail .review .bottom-group .van-steps--horizontal {
+  padding-left: 40rpx !important;
+  padding-right: 40rpx !important;
+  padding-top: auto !important;
+  padding-bottom: auto !important;
+}
+
+.detail .review .bottom-group .process {
+  width: 300rpx;
+  height: 90rpx;
+}
+
+.detail .review .bottom-group .button-style {
+  width: 150rpx;
+  height: 90rpx;
+  color: var(--themeColor);
 }
 
 .detail .copyright {
