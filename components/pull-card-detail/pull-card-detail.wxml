@@ -1,0 +1,7 @@
+<!--components/pull-card-detail/pull-card-detail.wxml-->
+<pull-card>
+  <view slot="title" class="text-title">{{item.partTitle}}</view>
+  <view slot="content" class="text-content">
+  <text user-select>{{item.text}}
+  </text></view>
+</pull-card>

@@ -6,12 +6,16 @@
   <van-dropdown-item bind:change="change_mytypical_search" model:value="{{ value2 }}" options="{{ option2 }}" />
   <van-dropdown-item bind:change="change_mytypical_search" model:value="{{ value3 }}" options="{{ option3 }}" />
   </van-dropdown-menu>
-  <scroll-view wx:if="{{!mytypical_data.length==0}}"	scroll-y="{{true}}" class="mytypical-list" style="--bottom-height--:{{bottom_heigth}}px;">
-    <pull-card wx:for="{{mytypical_data}}" wx:key="id" >
-  <!--案件列表设置超出tab栏就可以开始滚动并且最上方的查询栏不动固定在页面上方？-->
+  <scroll-view wx:if="{{!mytypical_data.length==0}}"	scroll-y="{{true}}" class="mytypical-list" style="--bottom-height--:{{bottom_height}}px;">
+    <view wx:for="{{mytypical_data}}" wx:key="index">
+      <pull-card-typicalList index="{{index}}" item="{{item}}" >
+      </pull-card-typicalList>
+    </view>
+    <!-- <pull-card wx:for="{{mytypical_data}}" wx:key="id" >
+
       <view slot="title" class="typical-detail" data-id="{{item.id}}" bind:tap="search_detail_text">
         <van-row custom-class="typical-num">
-          <!--<van-col span="6">{{index}}.</van-col>-->
+
           <van-col span="24">{{index+1}}. 案件编码：{{item.id}}</van-col>
         </van-row>
         <van-row custom-class="typical-title">
@@ -32,10 +36,9 @@
         </van-row>
       </view>
       <view class="text-brief" slot="content">
-      <text >案件简介案件简介案件简介案件简介案件简介案件简介案件简介案件简介案件简介案件简介案件简介案件简介v案件简介案件简介案件简介案件简介案件简介案件简介案件简介案件简介案件简介案件简介案件简介案件简介案件简介案件简介案件简介案件简介案件简介案件简介
-      </text>
+      <text >{{item.text_brief}}</text>
       </view>
-    </pull-card>
+    </pull-card> -->
   </scroll-view>
   <van-empty wx:else  description="暂时无待审核案例" style="width: 100%;"></van-empty>
 

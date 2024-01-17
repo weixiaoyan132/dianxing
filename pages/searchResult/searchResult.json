@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "pull-card-search":"/components/pull-card-search/pull-card-search",
+    "pull-card-typicalList":"/components/pull-card-typicalList/pull-card-typicalList"
+  }
+}

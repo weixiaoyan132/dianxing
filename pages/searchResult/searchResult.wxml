@@ -1,0 +1,13 @@
+<!--pages/searchResult/searchResult.wxml-->
+<view class="search-all">
+  <pull-card-search search_value="{{search_value}}"></pull-card-search>
+  <view class="search-result" style="--bottom-height--:{{bottom_height}}px;">
+    <scroll-view wx:if="{{!search_result.length==0}}"	scroll-y="{{true}}" class="mytypical-list" >
+      <view wx:for="{{search_result}}" wx:key="index">
+        <pull-card-typicalList index="{{index}}" item="{{item}}" >
+        </pull-card-typicalList>
+      </view>
+    </scroll-view>
+  </view>
+  
+</view>

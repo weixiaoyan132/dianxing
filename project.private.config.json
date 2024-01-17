@@ -11,6 +11,27 @@
       "list": [
         {
           "name": "",
+          "pathName": "pages/searchResult/searchResult",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/typicalHistoryList/typicalHistoryList",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/typelist/typelist",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
           "pathName": "pages/detailText/detailText",
           "query": "",
           "launchMode": "default",

@@ -1,0 +1,12 @@
+/* components/pull-card-detail/pull-card-detail.wxss */
+.text-title{
+  width: 100%;
+  color: var(--focusColor);
+  font-size: 40rpx;
+  padding:20rpx 0rpx 0rpx 50rpx;
+}
+.text-content{
+  width: 100%;
+  height: fit-content;
+  text-align: justify;
+}

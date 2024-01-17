@@ -1,0 +1,18 @@
+/* pages/searchResult/searchResult.wxss */
+.search-all {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-all .search-result {
+  flex: 1;
+  overflow: scroll;
+  padding-bottom: var(--bottom-height--);
+}
+
+.search-all .search-result .mytypical-list {
+  height: 100%;
+  border: 2rpx black;
+  padding-bottom: var(--bottom-height--);
+}

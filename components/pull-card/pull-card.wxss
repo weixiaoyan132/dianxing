@@ -1,18 +1,4 @@
 /* components/pull-card/pull-card.wxss */
-.card {
-  width: 97%;
-  height: fit-content;
-  background-color: white;
-  align-content: center;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 15rpx;
-  margin-top: 10rpx;
-  margin-bottom: 17rpx;
-  box-shadow: 0rpx 4rpx 15rpx lightgray;
-  padding-bottom: 15rpx;
-}
-
 .van-cell__right-icon-wrap {
   margin-left: auto !important;
   margin-right: auto !important;
@@ -26,5 +12,4 @@
 
 .van-collapse-item {
   max-height: fit-content !important;
-  
 }

@@ -1,0 +1,17 @@
+<!--components/pull-card-search/pull-card-search.wxml-->
+<pull-card>
+      <van-search
+        slot="title"
+        model:value="{{ value }}"
+        placeholder="请输入搜索关键词"
+        use-action-slot
+        bind:search="onSearch"
+        custom-class="search-subhead"
+        input-class="search-field"
+        >
+        <view slot="action" bind:tap="onSearch">搜索</view>
+      </van-search>
+      <view class="search-box" slot="content">
+        结构化搜索
+      </view>
+  </pull-card>

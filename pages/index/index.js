@@ -7,20 +7,22 @@ Page({
    * 页面的初始数据
    */
   data: {
-    value:"",
+    // value:"",
     typicalnum:50,
     allnum:60,
   },
   //点击搜索按钮或者按确认建进行搜索
   //跳转到搜索结果页面，搜索结果也包含搜索框
-  onSearch() {
-    Toast('搜索' + this.data.value);
-    console.log(this.data.value);
+  // onSearch() {
+  //   Toast('搜索' + this.data.value);
+  //   console.log(this.data.value);
 
-  },
+  // },
   
-  on_click_search(){
-    Toast('搜索' + this.data.value);
+  toTypeList(){
+    wx.navigateTo({
+      url: '/pages/typelist/typelist',
+    })
   },
 
   /**

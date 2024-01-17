@@ -1,0 +1,4 @@
+<!--pages/typicalHistoryList/typicalHistoryList.wxml-->
+<view class="historyList" wx:for="{{historyData}}" wx:key="id">
+  <pull-card-typicalHistory index="{{index}}" item="{{item}}"></pull-card-typicalHistory>
+</view>

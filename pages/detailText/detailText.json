@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "pull-card":"/components/pull-card/pull-card",
-    "van-divider": "@vant/weapp/divider/index"
+    "van-divider": "@vant/weapp/divider/index",
+    "pull-card-detail":"/components/pull-card-detail/pull-card-detail"
   }
 }

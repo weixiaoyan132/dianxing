@@ -40,10 +40,11 @@ Page({
         key:"www",
         type:"type",
         time:"2012-03-26",
-        status:"草稿"
+        status:"草稿",
+        text_brief:"简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介"
       },
       {
-        id:"123",
+        id:"123452",
         title:"111",
         key:"www",
         type:"type",
@@ -105,13 +106,13 @@ Page({
     console.log(e.detail);
   },
 
-  search_detail_text(e){
-    let id=e.currentTarget.dataset.id;
-    wx.navigateTo({
-      url: '/pages/detailText/detailText?id='+id,
-    })
+  // search_detail_text(e){
+  //   let id=e.currentTarget.dataset.id;
+  //   wx.navigateTo({
+  //     url: '/pages/detailText/detailText?id='+id,
+  //   })
     
-  },
+  // },
 
   /**
    * 生命周期函数--监听页面加载

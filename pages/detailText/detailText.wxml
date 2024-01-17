@@ -3,7 +3,7 @@
   <van-skeleton title  row="5" />
 </view>
 
-<view class="detail" wx:else>
+<view class="detail" wx:else style="--bottom-height--:{{bottom_height}}px;--window-height--:{{window_height}}px">
   <view class="title">
     {{detail.title}}
     <van-icon name="share-o" size="18" />
@@ -34,27 +34,43 @@
     
   </view> 
   <van-divider custom-style="margin:10rpx" />
-  <scroll-view scroll-y="{{true}}" class="content" style="--bottom-height--:{{bottom_height}}px;--window-height--:{{window_height}}px">
-    <view wx:for="{{detail.case_body.body}}" wx:key="partTitle">
-      <pull-card>
-      <view slot="title" class="text-title">{{item.partTitle}}</view>
-      <view slot="content" class="text-content">
-      <text user-select>{{item.text}}
-      </text></view>
-      </pull-card>
-    </view>
-  </scroll-view>
-  <view class="review">
+  <view class="body">
+    <scroll-view wx:if="{{detail.case_body.body.length}}" scroll-y="{{true}}" class="content" >
+      <view wx:for="{{detail.case_body.body}}" wx:key="partTitle">
+        <pull-card-detail item="{{item}}"></pull-card-detail>
+        <!-- <pull-card>
+        <view slot="title" class="text-title">{{item.partTitle}}</view>
+        <view slot="content" class="text-content">
+        <text user-select>{{item.text}}
+        </text></view>
+        </pull-card> -->
+      </view>
+      <pull-card-detail wx:if="{{!toReview}}" item="{{reasonItem}}"></pull-card-detail>
+      <pull-card-detail wx:if="{{!toReview}}" item="{{reviewItem}}"></pull-card-detail>
+    </scroll-view>
+  </view>
+  
+  <view class="review" wx:if="{{toReview}}">
     <view class="gpt-part" style="--bottom-height--:{{bottom_height}}px;" wx:if="{{gptHelp}}">
-      <van-icon name="cross" bind:tap="closeGPT" />
+      <view class="gpt-icon">
+        <van-icon name="cross" style="font-size: 45rpx;" bind:tap="closeGPT" />
+        <van-icon name="description" style="font-size: 45rpx;" />
+      </view>
+      <van-skeleton wx:if="{{!gptWord.length}}" row="3" />
+      <view wx:else class="gpt-word">
+        <scroll-view class="gpt-word-scroll" scroll-y="{{true}}"  >
+          <text user-select>{{gptWord}}</text>
+          </scroll-view>
+      </view>
     </view>
-    <view class="write-part"  >
+    <view class="write-part">
       <van-tabs swipeable active="reason" type="card" animated color="var(--themeColor)">
         <van-tab title="推荐理由" name="reason">
           <scroll-view scroll-y="{{true}}" style="height: calc(400rpx - 30px - 90rpx);">
             <van-field 
+              custom-class="write"
               adjust-position
-              value="{{ reason }}"
+              model:value="{{ reason }}"
               show-word-limit="{{true}}"
               maxlength="{{500}}"
               type="textarea"
@@ -67,7 +83,7 @@
         <van-tab title="专家点评" name="expert"><scroll-view scroll-y="{{true}}" style="height: calc(400rpx - 30px - 90rpx);">
             <van-field 
               adjust-position
-              value="{{ review }}"
+              model:value="{{ review }}"
               show-word-limit="{{true}}"
               maxlength="{{500}}"
               type="textarea"
@@ -79,7 +95,7 @@
       </van-tabs>
       <view class="bottom-group">
         <van-steps custom-class="process" steps="{{ steps }}" active="{{ active }}" active-color="var(--themeColor)" />
-        <van-button color="var(--themeColor)" type="info" custom-class="button-style">GPT</van-button>
+        <van-button bind:tap="openGPT" color="var(--themeColor)" type="info" custom-class="button-style">GPT</van-button>
         <van-button color="var(--themeColor)" plain hairline type="primary" custom-class="button-style">保存</van-button>
         <van-button color="var(--themeColor)" plain hairline type="primary" custom-class="button-style">提交</van-button>
       </view>

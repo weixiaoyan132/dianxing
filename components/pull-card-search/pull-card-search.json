@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "pull-card":"/components/pull-card/pull-card"
+  }
+}

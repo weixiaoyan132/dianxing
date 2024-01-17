@@ -4,6 +4,7 @@
   "usingComponents": {
     "van-dropdown-menu": "@vant/weapp/dropdown-menu/index",
     "van-dropdown-item": "@vant/weapp/dropdown-item/index",
-    "pull-card":"/components/pull-card/pull-card"
+    "pull-card":"/components/pull-card/pull-card",
+    "pull-card-typicalList":"/components/pull-card-typicalList/pull-card-typicalList"
   }
 }

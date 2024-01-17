@@ -1,5 +1,9 @@
 /* pages/detailText/detailText.wxss */
 .detail{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding-bottom: var(--bottom-height--);
   .title{
     font-size: 50rpx;
     line-height: 1.5em;
@@ -29,30 +33,33 @@
     }
 
   }
-
-  .content{
-    height: calc(var(--window-height--) - 182rpx - 156rpx - 400rpx - 10rpx - 2px - var(--bottom-height--));
-    //-10px是为了减去分割线的margin：10rpx，高1px
-    //-2是分割线的高1px，加上bottom的margintop 1px
-    overflow: hidden;
-    .text-title{
-      width: 100%;
-      color: var(--focusColor);
-      font-size: 40rpx;
-      padding:20rpx 0rpx 0rpx 50rpx;
-    }
-    .text-content{
-      width: 100%;
-      height: fit-content;
-      text-align: justify;
-    }
-    .text-content::after{
-      width: 100%;
-      display: inline-block;
-      content: '';
+  .body{
+    flex: 1;
+    overflow: scroll;
+    .content{
+      height: 100%;
+      // height: calc(var(--window-height--) - 182rpx - 156rpx - 400rpx - 10rpx - 2px - var(--bottom-height--));
+      //-10px是为了减去分割线的margin：10rpx，高1px
+      //-2是分割线的高1px，加上bottom的margintop 1px
+      overflow: hidden;
+      padding-bottom: 10rpx;
+      box-sizing: border-box;
+      // .text-title{
+      //   width: 100%;
+      //   color: var(--focusColor);
+      //   font-size: 40rpx;
+      //   padding:20rpx 0rpx 0rpx 50rpx;
+      // }
+      // .text-content{
+      //   width: 100%;
+      //   height: fit-content;
+      //   text-align: justify;
+      // }
+  
     }
 
   }
+  
   .review{
     height: 400rpx;
     background-color: var(--global3);
@@ -64,6 +71,23 @@
       position: absolute;
       bottom: calc(400rpx + 1px + var(--bottom-height--));
       //calc(400rpx + 1px + var(--bottom-height--))
+      .gpt-icon{
+        display: flex; justify-content: space-between;padding: 10rpx 10rpx;
+      }
+      .gpt-word{
+        font-size: 30rpx;
+        margin: 0 20rpx;
+        text-align: justify ;
+        color: var(--focusColor);
+        .gpt-word-scroll{
+          height: calc(300rpx - 21.6px - 20rpx); 
+          overflow: hidden; 
+          box-sizing: border-box; 
+          padding-bottom: 10rpx;
+        }
+      }
+      
+      
     }
     .write-part{
       height: 100%;
@@ -71,6 +95,10 @@
          margin: 0  !important;
          width: 100%;
       }
+      .van-field__control{
+        text-align: justify ;
+      }
+      
     }
     .bottom-group{
       display: flex;

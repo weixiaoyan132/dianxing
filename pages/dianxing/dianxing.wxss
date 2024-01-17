@@ -9,14 +9,10 @@ page{
   height: calc(100vh - 200rpx - 50px - var(--bottom-height--));
   border: 2rpx black;
 }
-.typical-all .mytypical-list .text-brief{
+/* .typical-all .mytypical-list .text-brief{
   text-align: justify;
 }
-.typical-all .mytypical-list .text-brief::after{
-  width: 100%;
-  display: inline-block;
-  content: ''; 
-}
+
 .typical-all .mytypical-list .typical-detail{
   height: fit-content;
   overflow: hidden;
@@ -43,5 +39,5 @@ page{
   text-align: center;
   margin-bottom: 20rpx;
   color: var(--globalColor);
-}
+} */
 

@@ -1,0 +1,33 @@
+<!--components/pull-card-typicalHistory/pull-card-typicalHistory.wxml-->
+<view class="card">
+  <van-collapse border="{{false}}"  value="{{ activeNames }}" bind:change="detail_search">
+    <view  class="typical-detail" data-id="{{item.id}}" bind:tap="search_detail_text">
+    <van-row custom-class="typical-num">
+      <van-col span="24">{{index+1}}. 案件编码：{{item.id}}</van-col>
+    </van-row>
+    <van-row custom-class="typical-title">
+      <van-col span="24"><text user-select>{{item.title}}</text></van-col>
+    </van-row>
+    <van-row custom-class="typical-text">
+      <van-col span="4" custom-class="typical-text-1">关键词</van-col>
+      <van-col span="8" custom-class="typical-text-2">：{{item.key}}</van-col>
+      <van-col span="3" custom-class="typical-text-1" >类别</van-col>
+      <van-col span="9" custom-class="typical-text-2">：{{item.type}}</van-col>
+    </van-row>
+    <van-row custom-class="typical-text">
+      <van-col span="4" custom-class="typical-text-1">状态</van-col>
+      <van-col span="8" custom-class="typical-text-2">：{{item.status}}</van-col>
+      <van-col span="3" custom-class="typical-text-1">时间</van-col>
+      <van-col span="9" custom-class="typical-text-2">：{{item.time}}</van-col>
+    </van-row>
+  </view>
+    <van-collapse-item wx:if="{{item.reason}}" title="推荐理由" border name="1" >
+      <view class="text-brief" >
+        <text user-select>{{item.reason}}</text>
+      </view>
+    </van-collapse-item>
+    <van-collapse-item wx:if="{{item.review}}" title="专家点评" name="2">
+      <text user-select>{{item.review}}</text>
+    </van-collapse-item>
+  </van-collapse>
+</view>

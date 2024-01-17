@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "历史点评",
+  "usingComponents": {
+    "pull-card-typicalHistory":"/components/pull-card-typicalHistory/pull-card-typicalHistory"
+  }
+}

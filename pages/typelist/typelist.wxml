@@ -1,5 +1,23 @@
 <!--pages/typelist/typelist.wxml-->
-<text>pages/typelist/typelist.wxml</text>
 <view class="list">
-
+  <van-cell-group title="典型案例">
+  </van-cell-group>
+  <van-collapse border="{{false}}" value="{{ activeNames }}" bind:change="subClassChange">
+  <van-collapse-item wx:for="{{class}}" wx:key="index" title="{{item.className}}" value="{{item.number}}" name="{{index+1}}">
+    <view>
+      <van-cell wx:for="{{item.subclass}}" wx:for-item="subitem" wx:for-index="subidx" wx:key="subidx" title="{{subitem.className}}" value="{{subitem.number}}" data-type="{{subitem.className}}" bind:tap="search_type" />
+    </view>
+  </van-collapse-item>
+</van-collapse>
+<!-- <van-cell-group title="全部案例">
+  <van-collapse border="{{false}}" value="{{ activeNames }}" bind:change="subClassChange">
+  <van-collapse-item wx:for="{{class}}" wx:key="index" title="{{item.className}}" value="{{item.number}}" name="{{index+1}}">
+    <view>
+      <van-cell wx:for="{{item.subclass}}" wx:for-item="subitem" wx:for-index="subidx" wx:key="subidx" title="{{subitem.className}}" value="{{subitem.number}}" data-type="{{subitem.className}}" bind:tap="search_type" />
+    </view>
+  </van-collapse-item>
+</van-collapse>
+</van-cell-group>
+内容都没改
+ -->
 </view>

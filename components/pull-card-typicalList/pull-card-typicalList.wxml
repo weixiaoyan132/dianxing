@@ -1,0 +1,26 @@
+<!--components/pull-card-typicalList/pull-card-typicalList.wxml-->
+<pull-card >
+  <view slot="title" class="typical-detail" data-id="{{item.id}}" bind:tap="search_detail_text">
+    <van-row custom-class="typical-num">
+      <van-col span="24">{{index+1}}. 案件编码：{{item.id}}</van-col>
+    </van-row>
+    <van-row custom-class="typical-title">
+      <van-col span="24"><text user-select>{{item.title}}</text></van-col>
+    </van-row>
+    <van-row custom-class="typical-text">
+      <van-col span="4" custom-class="typical-text-1">关键词</van-col>
+      <van-col span="8" custom-class="typical-text-2">：{{item.key}}</van-col>
+      <van-col span="3" custom-class="typical-text-1" >类别</van-col>
+      <van-col span="9" custom-class="typical-text-2">：{{item.type}}</van-col>
+    </van-row>
+    <van-row custom-class="typical-text">
+      <van-col span="4" custom-class="typical-text-1">状态</van-col>
+      <van-col span="8" custom-class="typical-text-2">：{{item.status}}</van-col>
+      <van-col span="3" custom-class="typical-text-1">时间</van-col>
+      <van-col span="9" custom-class="typical-text-2">：{{item.time}}</van-col>
+    </van-row>
+  </view>
+  <view class="text-brief" slot="content">
+  <text user-select>{{item.text_brief}}</text>
+  </view>
+</pull-card>

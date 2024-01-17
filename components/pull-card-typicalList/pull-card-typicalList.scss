@@ -1,0 +1,31 @@
+/* components/pull-card-typicalList/pull-card-typicalList.wxss */
+.text-brief{
+  text-align: justify;
+}
+.typical-detail{
+  height: fit-content;
+  overflow: hidden;
+  padding: 20rpx 20rpx 10rpx 20rpx;
+  color: var(--focusColor);
+  text-align: justify;
+  .typical-num{
+    margin-bottom: 20rpx;
+    color: var(--greyColor);
+  }
+  .typical-text{
+    line-height: 25rpx;
+    .typical-text-1{
+      text-align: justify;
+    }
+    .typical-text-1::after{
+      width: 100%;
+      display: inline-block;
+      content: '';
+    }
+  }
+  .typical-title{
+    text-align: center;
+    margin-bottom: 20rpx;
+    color: var(--globalColor);
+  }
+}

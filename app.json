@@ -5,7 +5,9 @@
     "pages/dianxing/dianxing",
     "pages/typelist/typelist",
     "pages/my/my",
-    "pages/detailText/detailText"
+    "pages/detailText/detailText",
+    "pages/typicalHistoryList/typicalHistoryList",
+    "pages/searchResult/searchResult"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -47,6 +49,7 @@
     "van-tabs": "@vant/weapp/tabs/index",
     "van-field": "@vant/weapp/field/index",
     "van-steps": "@vant/weapp/steps/index",
-    "van-button": "@vant/weapp/button/index"
+    "van-button": "@vant/weapp/button/index",
+    "van-skeleton": "@vant/weapp/skeleton/index"
   }
 }
